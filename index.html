@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>公共数据资源登记排名</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+:root {
+  --primary:#1a73e8;
+  --primary-light:#e8f0fe;
+  --bg:#f5f6fa;
+  --card-bg:#fff;
+  --text:#1a1a2e;
+  --text-sub:#666;
+  --text-light:#999;
+  --border:#eee;
+  --gold:#f8c92b;
+  --silver:#b0b0b0;
+  --bronze:#c6823a;
+  --up:#e74c3c;
+  --down:#27ae60;
+}
+body {
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+}
+
+/* 顶部头图 */
+.header {
+  background:linear-gradient(135deg,#1a3a5c,#2d6a9f);
+  color:#fff;
+  padding:20px 16px 24px;
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 2px 12px rgba(0,0,0,0.15);
+}
+.header-title {
+  font-size:17px;
+  font-weight:700;
+  margin-bottom:4px;
+}
+.header-sub {
+  font-size:12px;
+  opacity:0.8;
+  margin-bottom:16px;
+}
+.header-stats {
+  display:flex;
+  gap:0;
+  background:rgba(255,255,255,0.1);
+  border-radius:10px;
+  padding:12px 0;
+}
+.stat-item {
+  flex:1;
+  text-align:center;
+  border-right:1px solid rgba(255,255,255,0.15);
+}
+.stat-item:last-child { border-right:none; }
+.stat-num {
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:2px;
+}
+.stat-label {
+  font-size:11px;
+  opacity:0.7;
+}
+.collection-time {
+  font-size:12px;
+  opacity:0.7;
+  margin-top:10px;
+  text-align:center;
+}
+
+/* 加载状态 */
+.loading {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:80px 20px;
+  color:var(--text-light);
+}
+.spinner {
+  width:36px;
+  height:36px;
+  border:3px solid var(--border);
+  border-top-color:var(--primary);
+  border-radius:50%;
+  animation:spin 0.8s linear infinite;
+  margin-bottom:16px;
+}
+@keyframes spin { to { transform:rotate(360deg); } }
+
+/* 排名列表 */
+.rank-list {
+  padding:12px;
+}
+.rank-card {
+  background:var(--card-bg);
+  border-radius:12px;
+  margin-bottom:8px;
+  overflow:hidden;
+  box-shadow:0 1px 3px rgba(0,0,0,0.05);
+  transition:box-shadow 0.2s;
+}
+.rank-card:active {
+  box-shadow:0 1px 6px rgba(0,0,0,0.12);
+}
+.rank-header {
+  display:flex;
+  align-items:center;
+  padding:14px 16px;
+  cursor:pointer;
+}
+.rank-badge {
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  font-size:14px;
+  background:#e8e8e8;
+  color:#666;
+  flex-shrink:0;
+  margin-right:12px;
+}
+.rank-badge.gold { background:var(--gold); color:#5a3e00; font-size:16px; }
+.rank-badge.silver { background:var(--silver); color:#333; font-size:16px; }
+.rank-badge.bronze { background:var(--bronze); color:#fff; font-size:16px; }
+
+.rank-region {
+  flex:1;
+  font-size:15px;
+  font-weight:600;
+  color:var(--text);
+}
+.rank-total {
+  font-size:18px;
+  font-weight:700;
+  color:var(--text);
+}
+.rank-total .delta {
+  font-size:11px;
+  font-weight:600;
+  margin-left:6px;
+}
+.rank-total .delta.up { color:var(--up); }
+.rank-total .delta.down { color:var(--down); }
+.rank-total .delta.flat { color:var(--text-light); }
+.rank-arrow {
+  width:20px;
+  height:20px;
+  margin-left:8px;
+  transition:transform 0.3s;
+  color:var(--text-light);
+  flex-shrink:0;
+}
+.rank-arrow.expanded { transform:rotate(180deg); }
+
+/* 展开详情 */
+.rank-detail {
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.3s ease;
+}
+.rank-detail.show {
+  max-height:300px;
+}
+.detail-inner {
+  padding:0 16px 14px 60px;
+}
+.detail-row {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:8px 0;
+  border-top:1px solid var(--border);
+  font-size:13px;
+}
+.detail-label { color:var(--text-sub); }
+.detail-value {
+  font-weight:600;
+  color:var(--text);
+}
+.detail-value .delta {
+  font-size:11px;
+  font-weight:600;
+  margin-left:6px;
+}
+.detail-value .delta.up { color:var(--up); }
+.detail-value .delta.down { color:var(--down); }
+.detail-value .delta.flat { color:var(--text-light); }
+
+/* 合计行 */
+.total-card {
+  background:linear-gradient(135deg,#f0f4ff,#e8f0fe);
+  border:2px solid #b3d9f2;
+}
+.total-card .rank-region {
+  font-weight:700;
+}
+.total-card .rank-total {
+  color:var(--primary);
+  font-size:20px;
+}
+
+/* 分享条 */
+.share-bar {
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#fff;
+  border-top:1px solid var(--border);
+  padding:10px 16px;
+  display:flex;
+  gap:10px;
+  z-index:100;
+  box-shadow:0 -2px 10px rgba(0,0,0,0.06);
+}
+.share-btn {
+  flex:1;
+  height:42px;
+  border:none;
+  border-radius:21px;
+  font-size:15px;
+  font-weight:600;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  cursor:pointer;
+  transition:opacity 0.2s;
+}
+.share-btn:active { opacity:0.8; }
+.share-btn.primary {
+  background:var(--primary);
+  color:#fff;
+}
+.share-btn.secondary {
+  background:var(--primary-light);
+  color:var(--primary);
+}
+
+/* 底部留白 */
+.bottom-space {
+  height:64px;
+}
+
+/* 错误状态 */
+.error-state {
+  text-align:center;
+  padding:60px 20px;
+  color:var(--text-light);
+}
+.error-state .retry-btn {
+  margin-top:16px;
+  padding:10px 24px;
+  background:var(--primary);
+  color:#fff;
+  border:none;
+  border-radius:20px;
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* 趋势指示器 */
+.trend-bar {
+  height:4px;
+  border-radius:2px;
+  margin-top:4px;
+  background:linear-gradient(90deg,#e8e8e8 100%);
+  position:relative;
+  overflow:hidden;
+}
+.trend-bar .fill {
+  height:100%;
+  border-radius:2px;
+  background:var(--primary);
+}
+
+@media(min-width:768px) {
+  .rank-list { max-width:600px; margin:0 auto; }
+  .header { max-width:600px; margin:0 auto; }
+}
+</style>
+</head>
+<body>
+
+<div id="app">
+  <div class="header">
+    <div class="header-title">国家公共数据资源登记平台</div>
+    <div class="header-sub">资源查询 · 各地区登记数量排名</div>
+    <div class="header-stats">
+      <div class="stat-item">
+        <div class="stat-num" id="stat-total">—</div>
+        <div class="stat-label">总登记数</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" id="stat-delta">—</div>
+        <div class="stat-label">较昨日</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" id="stat-regions">—</div>
+        <div class="stat-label">登记地区</div>
+      </div>
+    </div>
+    <div class="collection-time" id="collection-time">加载中...</div>
+  </div>
+
+  <div id="content">
+    <div class="loading">
+      <div class="spinner"></div>
+      <div>正在加载排名数据...</div>
+    </div>
+  </div>
+
+  <div class="bottom-space"></div>
+</div>
+
+<div class="share-bar" id="share-bar" style="display:none;">
+  <button class="share-btn secondary" onclick="refreshData()">刷新数据</button>
+  <button class="share-btn primary" onclick="sharePage()">分享</button>
+</div>
+
+<script>
+var DATA_URL = 'data.json';
+var expandedRank = null;
+
+function fmtNum(n) {
+  if (n == null || n < 0) return '—';
+  return n.toLocaleString('zh-CN');
+}
+
+function fmtDelta(delta) {
+  if (delta == null) return '';
+  if (delta > 0) return '<span class="delta up">+' + delta.toLocaleString('zh-CN') + '</span>';
+  if (delta < 0) return '<span class="delta down">' + delta.toLocaleString('zh-CN') + '</span>';
+  return '<span class="delta flat">0</span>';
+}
+
+function getBadge(rank) {
+  if (rank === 1) return '<div class="rank-badge gold">1</div>';
+  if (rank === 2) return '<div class="rank-badge silver">2</div>';
+  if (rank === 3) return '<div class="rank-badge bronze">3</div>';
+  return '<div class="rank-badge">' + rank + '</div>';
+}
+
+function getMaxTotal(ranking) {
+  var max = 0;
+  for (var i = 0; i < ranking.length; i++) {
+    if (ranking[i].total > max) max = ranking[i].total;
+  }
+  return max;
+}
+
+function renderRanking(data) {
+  var ranking = data.ranking_with_delta || data.ranking || [];
+  var content = document.getElementById('content');
+  var maxTotal = getMaxTotal(ranking);
+
+  // 合计行放最后
+  var html = '<div class="rank-list">';
+
+  for (var i = 0; i < ranking.length; i++) {
+    var r = ranking[i];
+    var isExpanded = (expandedRank === r.rank);
+    var pct = Math.round(r.total / maxTotal * 100);
+
+    html += '<div class="rank-card' + (r.region === '全国合计' ? ' total-card' : '') + '">';
+    html += '<div class="rank-header" onclick="toggleDetail(' + r.rank + ')">';
+    html += getBadge(r.rank);
+    html += '<div class="rank-region">' + r.region + '</div>';
+    html += '<div class="rank-total">' + fmtNum(r.total) + fmtDelta(r.delta_total) + '</div>';
+    html += '<svg class="rank-arrow' + (isExpanded ? ' expanded' : '') + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>';
+    html += '</div>';
+
+    html += '<div class="rank-detail' + (isExpanded ? ' show' : '') + '">';
+    html += '<div class="detail-inner">';
+    html += detailRow('公共数据资源', r.type1, r.delta_type1);
+    html += detailRow('公共数据产品和服务', r.type2, r.delta_type2);
+    html += detailRow('开放数据资源', r.type3, r.delta_type3);
+    html += '</div>';
+    html += '</div>';
+
+    html += '</div>';
+  }
+
+  html += '</div>';
+
+  // 合计卡片
+  if (data.grand_total != null) {
+    var dTotal = data.totals ? data.totals.delta_total : null;
+    html += '<div class="rank-list">';
+    html += '<div class="rank-card total-card">';
+    html += '<div class="rank-header" onclick="toggleDetail(0)">';
+    html += '<div class="rank-badge" style="background:#1a73e8;color:#fff;">Σ</div>';
+    html += '<div class="rank-region">全国合计</div>';
+    html += '<div class="rank-total">' + fmtNum(data.grand_total) + fmtDelta(dTotal) + '</div>';
+    html += '<svg class="rank-arrow' + (expandedRank === 0 ? ' expanded' : '') + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>';
+    html += '</div>';
+    html += '<div class="rank-detail' + (expandedRank === 0 ? ' show' : '') + '">';
+    html += '<div class="detail-inner">';
+    if (data.totals) {
+      html += detailRow('公共数据资源', data.totals.sum_t1, data.totals.delta_t1);
+      html += detailRow('公共数据产品和服务', data.totals.sum_t2, data.totals.delta_t2);
+      html += detailRow('开放数据资源', data.totals.sum_t3, data.totals.delta_t3);
+    }
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
+  }
+
+  content.innerHTML = html;
+}
+
+function detailRow(label, value, delta) {
+  return '<div class="detail-row">' +
+    '<span class="detail-label">' + label + '</span>' +
+    '<span class="detail-value">' + fmtNum(value) + fmtDelta(delta) + '</span>' +
+    '</div>';
+}
+
+function toggleDetail(rank) {
+  expandedRank = (expandedRank === rank) ? null : rank;
+  fetchData(true);
+}
+
+function updateHeader(data) {
+  document.getElementById('stat-total').textContent = fmtNum(data.grand_total);
+  document.getElementById('stat-regions').textContent = data.total_regions || '—';
+  var deltaEl = document.getElementById('stat-delta');
+  if (data.totals && data.totals.delta_total != null) {
+    var d = data.totals.delta_total;
+    if (d > 0) {
+      deltaEl.textContent = '+' + d.toLocaleString('zh-CN');
+      deltaEl.style.color = '#ff6b6b';
+    } else if (d < 0) {
+      deltaEl.textContent = d.toLocaleString('zh-CN');
+      deltaEl.style.color = '#51cf66';
+    } else {
+      deltaEl.textContent = '0';
+      deltaEl.style.color = '#fff';
+    }
+  } else {
+    deltaEl.textContent = '—';
+  }
+  document.getElementById('collection-time').textContent = '最新采集时间：' + (data.query_time || data.date || '');
+}
+
+function fetchData(skipLoading) {
+  if (!skipLoading) {
+    document.getElementById('content').innerHTML = '<div class="loading"><div class="spinner"></div><div>正在加载排名数据...</div></div>';
+  }
+  fetch(DATA_URL + '?_t=' + Date.now())
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      updateHeader(data);
+      renderRanking(data);
+      document.getElementById('share-bar').style.display = 'flex';
+    })
+    .catch(function(err) {
+      document.getElementById('content').innerHTML = '<div class="error-state"><div>数据加载失败</div><div style="font-size:13px;margin-top:8px;">' + err.message + '</div><button class="retry-btn" onclick="fetchData()">重试</button></div>';
+    });
+}
+
+function refreshData() {
+  expandedRank = null;
+  fetchData();
+}
+
+function sharePage() {
+  if (navigator.share) {
+    navigator.share({
+      title: '公共数据资源登记排名',
+      text: '国家公共数据资源登记平台 · 各地区登记数量排名',
+      url: window.location.href
+    }).catch(function() {});
+  } else {
+    var url = window.location.href;
+    var input = document.createElement('input');
+    input.value = url;
+    document.body.appendChild(input);
+    input.select();
+    try { document.execCommand('copy'); } catch(e) {}
+    document.body.removeChild(input);
+    var btn = document.querySelector('.share-btn.primary');
+    var orig = btn.innerHTML;
+    btn.innerHTML = '已复制链接';
+    setTimeout(function() { btn.innerHTML = orig; }, 2000);
+  }
+}
+
+fetchData();
+</script>
+</body>
+</html>
