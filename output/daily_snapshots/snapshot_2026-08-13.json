@@ -1,6 +1,6 @@
 {
   "date": "2026-08-13",
-  "query_time": "2026-08-13 09:04:58",
+  "query_time": "2026-08-13 11:09:42",
   "source": "https://sjdj.nda.gov.cn/userHome -> 资源查询",
   "api_endpoint": "/register/statistics/resourceDiscovery/getRegisterInfoSingleList",
   "data_types": [
@@ -18,16 +18,16 @@
     }
   ],
   "total_regions": 33,
-  "grand_total": 459902,
+  "grand_total": 459912,
   "ranking": [
     {
       "rank": 1,
       "region": "河北省",
       "province_code": "130000",
       "type1": 156587,
-      "type2": 2586,
+      "type2": 2587,
       "type3": 0,
-      "total": 159173
+      "total": 159174
     },
     {
       "rank": 2,
@@ -87,10 +87,10 @@
       "rank": 8,
       "region": "湖南省",
       "province_code": "430000",
-      "type1": 4300,
+      "type1": 4301,
       "type2": 147,
       "type3": 0,
-      "total": 4447
+      "total": 4448
     },
     {
       "rank": 9,
@@ -105,10 +105,10 @@
       "rank": 10,
       "region": "内蒙古自治区",
       "province_code": "150000",
-      "type1": 63,
+      "type1": 68,
       "type2": 49,
       "type3": 2025,
-      "total": 2137
+      "total": 2142
     },
     {
       "rank": 11,
@@ -150,10 +150,10 @@
       "rank": 15,
       "region": "江西省",
       "province_code": "360000",
-      "type1": 1129,
+      "type1": 1132,
       "type2": 57,
       "type3": 56,
-      "total": 1242
+      "total": 1245
     },
     {
       "rank": 16,
