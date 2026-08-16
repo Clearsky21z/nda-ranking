@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-16",
-  "query_time": "2026-08-16 05:23:55",
+  "date": "2026-08-17",
+  "query_time": "2026-08-17 05:22:54",
   "source": "https://sjdj.nda.gov.cn/userHome -> 资源查询",
   "api_endpoint": "/register/statistics/resourceDiscovery/getRegisterInfoSingleList",
   "data_types": [
@@ -318,21 +318,21 @@
       "total": 4
     }
   ],
-  "yesterday_date": "2026-08-15",
+  "yesterday_date": "2026-08-16",
   "has_comparison": true,
   "totals": {
     "sum_t1": 293452,
     "sum_t2": 5558,
     "sum_t3": 161496,
     "sum_total": 460506,
-    "y_sum_t1": 293442,
+    "y_sum_t1": 293452,
     "y_sum_t2": 5558,
     "y_sum_t3": 161496,
-    "y_sum_total": 460496,
-    "delta_t1": 10,
+    "y_sum_total": 460506,
+    "delta_t1": 0,
     "delta_t2": 0,
     "delta_t3": 0,
-    "delta_total": 10
+    "delta_total": 0
   },
   "ranking_with_delta": [
     {
@@ -438,14 +438,14 @@
       "type2": 222,
       "type3": 8499,
       "total": 13179,
-      "y_type1": 4448,
+      "y_type1": 4458,
       "y_type2": 222,
       "y_type3": 8499,
-      "y_total": 13169,
-      "delta_type1": 10,
+      "y_total": 13179,
+      "delta_type1": 0,
       "delta_type2": 0,
       "delta_type3": 0,
-      "delta_total": 10
+      "delta_total": 0
     },
     {
       "rank": 8,
