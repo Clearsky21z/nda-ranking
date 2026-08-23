@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-23",
-  "query_time": "2026-08-23 05:24:09",
+  "date": "2026-08-24",
+  "query_time": "2026-08-24 05:24:10",
   "source": "https://sjdj.nda.gov.cn/userHome -> 资源查询",
   "api_endpoint": "/register/statistics/resourceDiscovery/getRegisterInfoSingleList",
   "data_types": [
@@ -18,7 +18,7 @@
     }
   ],
   "total_regions": 33,
-  "grand_total": 461995,
+  "grand_total": 461997,
   "ranking": [
     {
       "rank": 1,
@@ -186,10 +186,10 @@
       "rank": 19,
       "region": "辽宁省",
       "province_code": "210000",
-      "type1": 314,
+      "type1": 316,
       "type2": 13,
       "type3": 0,
-      "total": 327
+      "total": 329
     },
     {
       "rank": 20,
@@ -318,21 +318,21 @@
       "total": 4
     }
   ],
-  "yesterday_date": "2026-08-22",
+  "yesterday_date": "2026-08-23",
   "has_comparison": true,
   "totals": {
-    "sum_t1": 294899,
+    "sum_t1": 294901,
     "sum_t2": 5600,
     "sum_t3": 161496,
-    "sum_total": 461995,
-    "y_sum_t1": 294892,
+    "sum_total": 461997,
+    "y_sum_t1": 294899,
     "y_sum_t2": 5600,
     "y_sum_t3": 161496,
-    "y_sum_total": 461988,
-    "delta_t1": 7,
+    "y_sum_total": 461995,
+    "delta_t1": 2,
     "delta_t2": 0,
     "delta_t3": 0,
-    "delta_total": 7
+    "delta_total": 2
   },
   "ranking_with_delta": [
     {
@@ -358,14 +358,14 @@
       "type2": 172,
       "type3": 66004,
       "total": 68673,
-      "y_type1": 2495,
+      "y_type1": 2497,
       "y_type2": 172,
       "y_type3": 66004,
-      "y_total": 68671,
-      "delta_type1": 2,
+      "y_total": 68673,
+      "delta_type1": 0,
       "delta_type2": 0,
       "delta_type3": 0,
-      "delta_total": 2
+      "delta_total": 0
     },
     {
       "rank": 3,
@@ -626,18 +626,18 @@
     {
       "rank": 19,
       "region": "辽宁省",
-      "type1": 314,
+      "type1": 316,
       "type2": 13,
       "type3": 0,
-      "total": 327,
-      "y_type1": 309,
+      "total": 329,
+      "y_type1": 314,
       "y_type2": 13,
       "y_type3": 0,
-      "y_total": 322,
-      "delta_type1": 5,
+      "y_total": 327,
+      "delta_type1": 2,
       "delta_type2": 0,
       "delta_type3": 0,
-      "delta_total": 5
+      "delta_total": 2
     },
     {
       "rank": 20,
