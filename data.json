@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-29",
-  "query_time": "2026-08-29 11:06:01",
+  "date": "2026-08-30",
+  "query_time": "2026-08-30 07:04:55",
   "source": "https://sjdj.nda.gov.cn/userHome -> 资源查询",
   "api_endpoint": "/register/statistics/resourceDiscovery/getRegisterInfoSingleList",
   "data_types": [
@@ -318,21 +318,21 @@
       "total": 4
     }
   ],
-  "yesterday_date": "2026-08-28",
+  "yesterday_date": "2026-08-29",
   "has_comparison": true,
   "totals": {
     "sum_t1": 296039,
     "sum_t2": 5616,
     "sum_t3": 161496,
     "sum_total": 463151,
-    "y_sum_t1": 295727,
+    "y_sum_t1": 296039,
     "y_sum_t2": 5616,
     "y_sum_t3": 161496,
-    "y_sum_total": 462839,
-    "delta_t1": 312,
+    "y_sum_total": 463151,
+    "delta_t1": 0,
     "delta_t2": 0,
     "delta_t3": 0,
-    "delta_total": 312
+    "delta_total": 0
   },
   "ranking_with_delta": [
     {
@@ -374,14 +374,14 @@
       "type2": 25,
       "type3": 0,
       "total": 66636,
-      "y_type1": 66388,
+      "y_type1": 66611,
       "y_type2": 25,
       "y_type3": 0,
-      "y_total": 66413,
-      "delta_type1": 223,
+      "y_total": 66636,
+      "delta_type1": 0,
       "delta_type2": 0,
       "delta_type3": 0,
-      "delta_total": 223
+      "delta_total": 0
     },
     {
       "rank": 4,
@@ -406,14 +406,14 @@
       "type2": 395,
       "type3": 18282,
       "total": 48218,
-      "y_type1": 29527,
+      "y_type1": 29541,
       "y_type2": 395,
       "y_type3": 18282,
-      "y_total": 48204,
-      "delta_type1": 14,
+      "y_total": 48218,
+      "delta_type1": 0,
       "delta_type2": 0,
       "delta_type3": 0,
-      "delta_total": 14
+      "delta_total": 0
     },
     {
       "rank": 6,
@@ -502,14 +502,14 @@
       "type2": 682,
       "type3": 0,
       "total": 2073,
-      "y_type1": 1369,
+      "y_type1": 1391,
       "y_type2": 682,
       "y_type3": 0,
-      "y_total": 2051,
-      "delta_type1": 22,
+      "y_total": 2073,
+      "delta_type1": 0,
       "delta_type2": 0,
       "delta_type3": 0,
-      "delta_total": 22
+      "delta_total": 0
     },
     {
       "rank": 12,
@@ -566,14 +566,14 @@
       "type2": 62,
       "type3": 56,
       "total": 1428,
-      "y_type1": 1311,
+      "y_type1": 1310,
       "y_type2": 62,
       "y_type3": 56,
-      "y_total": 1429,
-      "delta_type1": -1,
+      "y_total": 1428,
+      "delta_type1": 0,
       "delta_type2": 0,
       "delta_type3": 0,
-      "delta_total": -1
+      "delta_total": 0
     },
     {
       "rank": 16,
@@ -630,14 +630,14 @@
       "type2": 13,
       "type3": 0,
       "total": 408,
-      "y_type1": 341,
+      "y_type1": 395,
       "y_type2": 13,
       "y_type3": 0,
-      "y_total": 354,
-      "delta_type1": 54,
+      "y_total": 408,
+      "delta_type1": 0,
       "delta_type2": 0,
       "delta_type3": 0,
-      "delta_total": 54
+      "delta_total": 0
     },
     {
       "rank": 20,
