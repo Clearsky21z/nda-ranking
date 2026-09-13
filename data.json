@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-13",
-  "query_time": "2026-09-13 06:53:21",
+  "date": "2026-09-14",
+  "query_time": "2026-09-14 06:59:30",
   "source": "https://sjdj.nda.gov.cn/userHome -> 资源查询",
   "api_endpoint": "/register/statistics/resourceDiscovery/getRegisterInfoSingleList",
   "data_types": [
@@ -318,7 +318,7 @@
       "total": 4
     }
   ],
-  "yesterday_date": "2026-09-12",
+  "yesterday_date": "2026-09-13",
   "has_comparison": true,
   "totals": {
     "sum_t1": 298076,
