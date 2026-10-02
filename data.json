@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-01",
-  "query_time": "2026-10-01 08:25:00",
+  "date": "2026-10-02",
+  "query_time": "2026-10-02 08:35:27",
   "source": "https://sjdj.nda.gov.cn/userHome -> 资源查询",
   "api_endpoint": "/register/statistics/resourceDiscovery/getRegisterInfoSingleList",
   "data_types": [
@@ -318,21 +318,21 @@
       "total": 4
     }
   ],
-  "yesterday_date": "2026-09-30",
+  "yesterday_date": "2026-10-01",
   "has_comparison": true,
   "totals": {
     "sum_t1": 299615,
     "sum_t2": 5785,
     "sum_t3": 161496,
     "sum_total": 466896,
-    "y_sum_t1": 299585,
+    "y_sum_t1": 299615,
     "y_sum_t2": 5785,
     "y_sum_t3": 161496,
-    "y_sum_total": 466866,
-    "delta_t1": 30,
+    "y_sum_total": 466896,
+    "delta_t1": 0,
     "delta_t2": 0,
     "delta_t3": 0,
-    "delta_total": 30
+    "delta_total": 0
   },
   "ranking_with_delta": [
     {
@@ -342,14 +342,14 @@
       "type2": 2608,
       "type3": 0,
       "total": 159133,
-      "y_type1": 156526,
+      "y_type1": 156525,
       "y_type2": 2608,
       "y_type3": 0,
-      "y_total": 159134,
-      "delta_type1": -1,
+      "y_total": 159133,
+      "delta_type1": 0,
       "delta_type2": 0,
       "delta_type3": 0,
-      "delta_total": -1
+      "delta_total": 0
     },
     {
       "rank": 2,
@@ -566,14 +566,14 @@
       "type2": 63,
       "type3": 56,
       "total": 1633,
-      "y_type1": 1507,
+      "y_type1": 1514,
       "y_type2": 63,
       "y_type3": 56,
-      "y_total": 1626,
-      "delta_type1": 7,
+      "y_total": 1633,
+      "delta_type1": 0,
       "delta_type2": 0,
       "delta_type3": 0,
-      "delta_total": 7
+      "delta_total": 0
     },
     {
       "rank": 16,
@@ -646,14 +646,14 @@
       "type2": 181,
       "type3": 0,
       "total": 334,
-      "y_type1": 131,
+      "y_type1": 153,
       "y_type2": 181,
       "y_type3": 0,
-      "y_total": 312,
-      "delta_type1": 22,
+      "y_total": 334,
+      "delta_type1": 0,
       "delta_type2": 0,
       "delta_type3": 0,
-      "delta_total": 22
+      "delta_total": 0
     },
     {
       "rank": 21,
@@ -710,14 +710,14 @@
       "type2": 0,
       "type3": 0,
       "total": 51,
-      "y_type1": 49,
+      "y_type1": 51,
       "y_type2": 0,
       "y_type3": 0,
-      "y_total": 49,
-      "delta_type1": 2,
+      "y_total": 51,
+      "delta_type1": 0,
       "delta_type2": 0,
       "delta_type3": 0,
-      "delta_total": 2
+      "delta_total": 0
     },
     {
       "rank": 25,
