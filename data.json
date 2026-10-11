@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-10",
-  "query_time": "2026-10-10 08:34:14",
+  "date": "2026-10-11",
+  "query_time": "2026-10-11 08:09:09",
   "source": "https://sjdj.nda.gov.cn/userHome -> 资源查询",
   "api_endpoint": "/register/statistics/resourceDiscovery/getRegisterInfoSingleList",
   "data_types": [
@@ -18,7 +18,7 @@
     }
   ],
   "total_regions": 33,
-  "grand_total": 467367,
+  "grand_total": 467382,
   "ranking": [
     {
       "rank": 1,
@@ -87,10 +87,10 @@
       "rank": 8,
       "region": "湖南省",
       "province_code": "430000",
-      "type1": 4824,
+      "type1": 4829,
       "type2": 147,
       "type3": 0,
-      "total": 4971
+      "total": 4976
     },
     {
       "rank": 9,
@@ -114,10 +114,10 @@
       "rank": 11,
       "region": "内蒙古自治区",
       "province_code": "150000",
-      "type1": 74,
+      "type1": 75,
       "type2": 54,
       "type3": 2025,
-      "total": 2153
+      "total": 2154
     },
     {
       "rank": 12,
@@ -141,10 +141,10 @@
       "rank": 14,
       "region": "山东省",
       "province_code": "370000",
-      "type1": 1678,
+      "type1": 1685,
       "type2": 88,
       "type3": 19,
-      "total": 1785
+      "total": 1792
     },
     {
       "rank": 15,
@@ -186,10 +186,10 @@
       "rank": 19,
       "region": "云南省",
       "province_code": "530000",
-      "type1": 401,
+      "type1": 403,
       "type2": 46,
       "type3": 0,
-      "total": 447
+      "total": 449
     },
     {
       "rank": 20,
@@ -318,21 +318,21 @@
       "total": 4
     }
   ],
-  "yesterday_date": "2026-10-09",
+  "yesterday_date": "2026-10-10",
   "has_comparison": true,
   "totals": {
-    "sum_t1": 300062,
+    "sum_t1": 300077,
     "sum_t2": 5809,
     "sum_t3": 161496,
-    "sum_total": 467367,
-    "y_sum_t1": 299891,
-    "y_sum_t2": 5788,
+    "sum_total": 467382,
+    "y_sum_t1": 300062,
+    "y_sum_t2": 5809,
     "y_sum_t3": 161496,
-    "y_sum_total": 467175,
-    "delta_t1": 171,
-    "delta_t2": 21,
+    "y_sum_total": 467367,
+    "delta_t1": 15,
+    "delta_t2": 0,
     "delta_t3": 0,
-    "delta_total": 192
+    "delta_total": 15
   },
   "ranking_with_delta": [
     {
@@ -342,14 +342,14 @@
       "type2": 2605,
       "type3": 0,
       "total": 159125,
-      "y_type1": 156521,
-      "y_type2": 2608,
+      "y_type1": 156520,
+      "y_type2": 2605,
       "y_type3": 0,
-      "y_total": 159129,
-      "delta_type1": -1,
-      "delta_type2": -3,
+      "y_total": 159125,
+      "delta_type1": 0,
+      "delta_type2": 0,
       "delta_type3": 0,
-      "delta_total": -4
+      "delta_total": 0
     },
     {
       "rank": 2,
@@ -406,14 +406,14 @@
       "type2": 398,
       "type3": 18282,
       "total": 48877,
-      "y_type1": 30050,
-      "y_type2": 397,
+      "y_type1": 30197,
+      "y_type2": 398,
       "y_type3": 18282,
-      "y_total": 48729,
-      "delta_type1": 147,
-      "delta_type2": 1,
+      "y_total": 48877,
+      "delta_type1": 0,
+      "delta_type2": 0,
       "delta_type3": 0,
-      "delta_total": 148
+      "delta_total": 0
     },
     {
       "rank": 6,
@@ -422,14 +422,14 @@
       "type2": 269,
       "type3": 21601,
       "total": 22430,
-      "y_type1": 552,
-      "y_type2": 246,
+      "y_type1": 560,
+      "y_type2": 269,
       "y_type3": 21601,
-      "y_total": 22399,
-      "delta_type1": 8,
-      "delta_type2": 23,
+      "y_total": 22430,
+      "delta_type1": 0,
+      "delta_type2": 0,
       "delta_type3": 0,
-      "delta_total": 31
+      "delta_total": 0
     },
     {
       "rank": 7,
@@ -438,30 +438,30 @@
       "type2": 222,
       "type3": 8499,
       "total": 13409,
-      "y_type1": 4685,
+      "y_type1": 4688,
       "y_type2": 222,
       "y_type3": 8499,
-      "y_total": 13406,
-      "delta_type1": 3,
+      "y_total": 13409,
+      "delta_type1": 0,
       "delta_type2": 0,
       "delta_type3": 0,
-      "delta_total": 3
+      "delta_total": 0
     },
     {
       "rank": 8,
       "region": "湖南省",
-      "type1": 4824,
+      "type1": 4829,
       "type2": 147,
       "type3": 0,
-      "total": 4971,
-      "y_type1": 4821,
+      "total": 4976,
+      "y_type1": 4824,
       "y_type2": 147,
       "y_type3": 0,
-      "y_total": 4968,
-      "delta_type1": 3,
+      "y_total": 4971,
+      "delta_type1": 5,
       "delta_type2": 0,
       "delta_type3": 0,
-      "delta_total": 3
+      "delta_total": 5
     },
     {
       "rank": 9,
@@ -498,18 +498,18 @@
     {
       "rank": 11,
       "region": "内蒙古自治区",
-      "type1": 74,
+      "type1": 75,
       "type2": 54,
       "type3": 2025,
-      "total": 2153,
+      "total": 2154,
       "y_type1": 74,
       "y_type2": 54,
       "y_type3": 2025,
       "y_total": 2153,
-      "delta_type1": 0,
+      "delta_type1": 1,
       "delta_type2": 0,
       "delta_type3": 0,
-      "delta_total": 0
+      "delta_total": 1
     },
     {
       "rank": 12,
@@ -518,14 +518,14 @@
       "type2": 183,
       "type3": 841,
       "total": 1889,
-      "y_type1": 862,
+      "y_type1": 865,
       "y_type2": 183,
       "y_type3": 841,
-      "y_total": 1886,
-      "delta_type1": 3,
+      "y_total": 1889,
+      "delta_type1": 0,
       "delta_type2": 0,
       "delta_type3": 0,
-      "delta_total": 3
+      "delta_total": 0
     },
     {
       "rank": 13,
@@ -546,18 +546,18 @@
     {
       "rank": 14,
       "region": "山东省",
-      "type1": 1678,
+      "type1": 1685,
       "type2": 88,
       "type3": 19,
-      "total": 1785,
+      "total": 1792,
       "y_type1": 1678,
       "y_type2": 88,
       "y_type3": 19,
       "y_total": 1785,
-      "delta_type1": 0,
+      "delta_type1": 7,
       "delta_type2": 0,
       "delta_type3": 0,
-      "delta_total": 0
+      "delta_total": 7
     },
     {
       "rank": 15,
@@ -614,30 +614,30 @@
       "type2": 14,
       "type3": 0,
       "total": 464,
-      "y_type1": 442,
+      "y_type1": 450,
       "y_type2": 14,
       "y_type3": 0,
-      "y_total": 456,
-      "delta_type1": 8,
-      "delta_type2": 0,
-      "delta_type3": 0,
-      "delta_total": 8
-    },
-    {
-      "rank": 19,
-      "region": "云南省",
-      "type1": 401,
-      "type2": 46,
-      "type3": 0,
-      "total": 447,
-      "y_type1": 401,
-      "y_type2": 46,
-      "y_type3": 0,
-      "y_total": 447,
+      "y_total": 464,
       "delta_type1": 0,
       "delta_type2": 0,
       "delta_type3": 0,
       "delta_total": 0
+    },
+    {
+      "rank": 19,
+      "region": "云南省",
+      "type1": 403,
+      "type2": 46,
+      "type3": 0,
+      "total": 449,
+      "y_type1": 401,
+      "y_type2": 46,
+      "y_type3": 0,
+      "y_total": 447,
+      "delta_type1": 2,
+      "delta_type2": 0,
+      "delta_type3": 0,
+      "delta_total": 2
     },
     {
       "rank": 20,
