@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-18",
-  "query_time": "2026-10-18 06:56:26",
+  "date": "2026-10-19",
+  "query_time": "2026-10-19 06:52:22",
   "source": "https://sjdj.nda.gov.cn/userHome -> 资源查询",
   "api_endpoint": "/register/statistics/resourceDiscovery/getRegisterInfoSingleList",
   "data_types": [
@@ -18,7 +18,7 @@
     }
   ],
   "total_regions": 33,
-  "grand_total": 438307,
+  "grand_total": 438490,
   "ranking": [
     {
       "rank": 1,
@@ -33,10 +33,10 @@
       "rank": 2,
       "region": "江苏省",
       "province_code": "320000",
-      "type1": 68851,
-      "type2": 25,
+      "type1": 69033,
+      "type2": 26,
       "type3": 0,
-      "total": 68876
+      "total": 69059
     },
     {
       "rank": 3,
@@ -318,21 +318,21 @@
       "total": 4
     }
   ],
-  "yesterday_date": "2026-10-17",
+  "yesterday_date": "2026-10-18",
   "has_comparison": true,
   "totals": {
-    "sum_t1": 270431,
-    "sum_t2": 5822,
+    "sum_t1": 270613,
+    "sum_t2": 5823,
     "sum_t3": 162054,
-    "sum_total": 438307,
-    "y_sum_t1": 269784,
+    "sum_total": 438490,
+    "y_sum_t1": 270431,
     "y_sum_t2": 5822,
     "y_sum_t3": 162054,
-    "y_sum_total": 437660,
-    "delta_t1": 647,
-    "delta_t2": 0,
+    "y_sum_total": 438307,
+    "delta_t1": 182,
+    "delta_t2": 1,
     "delta_t3": 0,
-    "delta_total": 647
+    "delta_total": 183
   },
   "ranking_with_delta": [
     {
@@ -354,18 +354,18 @@
     {
       "rank": 2,
       "region": "江苏省",
-      "type1": 68851,
-      "type2": 25,
+      "type1": 69033,
+      "type2": 26,
       "type3": 0,
-      "total": 68876,
-      "y_type1": 68204,
+      "total": 69059,
+      "y_type1": 68851,
       "y_type2": 25,
       "y_type3": 0,
-      "y_total": 68229,
-      "delta_type1": 647,
-      "delta_type2": 0,
+      "y_total": 68876,
+      "delta_type1": 182,
+      "delta_type2": 1,
       "delta_type3": 0,
-      "delta_total": 647
+      "delta_total": 183
     },
     {
       "rank": 3,
