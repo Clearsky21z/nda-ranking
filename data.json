@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-01",
-  "query_time": "2026-11-01 07:58:01",
+  "date": "2026-11-02",
+  "query_time": "2026-11-02 08:24:24",
   "source": "https://sjdj.nda.gov.cn/userHome -> 资源查询",
   "api_endpoint": "/register/statistics/resourceDiscovery/getRegisterInfoSingleList",
   "data_types": [
@@ -18,16 +18,16 @@
     }
   ],
   "total_regions": 33,
-  "grand_total": 439678,
+  "grand_total": 440311,
   "ranking": [
     {
       "rank": 1,
       "region": "河北省",
       "province_code": "130000",
-      "type1": 123616,
+      "type1": 124246,
       "type2": 2617,
       "type3": 0,
-      "total": 126233
+      "total": 126863
     },
     {
       "rank": 2,
@@ -177,10 +177,10 @@
       "rank": 18,
       "region": "辽宁省",
       "province_code": "210000",
-      "type1": 492,
+      "type1": 495,
       "type2": 14,
       "type3": 0,
-      "total": 506
+      "total": 509
     },
     {
       "rank": 19,
@@ -318,38 +318,38 @@
       "total": 4
     }
   ],
-  "yesterday_date": "2026-10-31",
+  "yesterday_date": "2026-11-01",
   "has_comparison": true,
   "totals": {
-    "sum_t1": 271626,
+    "sum_t1": 272259,
     "sum_t2": 5998,
     "sum_t3": 162054,
-    "sum_total": 439678,
-    "y_sum_t1": 271158,
+    "sum_total": 440311,
+    "y_sum_t1": 271626,
     "y_sum_t2": 5998,
     "y_sum_t3": 162054,
-    "y_sum_total": 439210,
-    "delta_t1": 468,
+    "y_sum_total": 439678,
+    "delta_t1": 633,
     "delta_t2": 0,
     "delta_t3": 0,
-    "delta_total": 468
+    "delta_total": 633
   },
   "ranking_with_delta": [
     {
       "rank": 1,
       "region": "河北省",
-      "type1": 123616,
+      "type1": 124246,
       "type2": 2617,
       "type3": 0,
-      "total": 126233,
-      "y_type1": 123148,
+      "total": 126863,
+      "y_type1": 123616,
       "y_type2": 2617,
       "y_type3": 0,
-      "y_total": 125765,
-      "delta_type1": 468,
+      "y_total": 126233,
+      "delta_type1": 630,
       "delta_type2": 0,
       "delta_type3": 0,
-      "delta_total": 468
+      "delta_total": 630
     },
     {
       "rank": 2,
@@ -610,18 +610,18 @@
     {
       "rank": 18,
       "region": "辽宁省",
-      "type1": 492,
+      "type1": 495,
       "type2": 14,
       "type3": 0,
-      "total": 506,
+      "total": 509,
       "y_type1": 492,
       "y_type2": 14,
       "y_type3": 0,
       "y_total": 506,
-      "delta_type1": 0,
+      "delta_type1": 3,
       "delta_type2": 0,
       "delta_type3": 0,
-      "delta_total": 0
+      "delta_total": 3
     },
     {
       "rank": 19,
